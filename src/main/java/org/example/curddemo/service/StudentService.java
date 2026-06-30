@@ -1,7 +1,6 @@
 package org.example.curddemo.service;
 
-import jakarta.transaction.Transactional;
-import org.example.curddemo.Response;
+
 import org.example.curddemo.dto.StudentDTO;
 
 import java.util.List;

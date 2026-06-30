@@ -2,7 +2,7 @@ package org.example.curddemo.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Generated;
+
 @Entity
 @Data
 @Table(name = "student")

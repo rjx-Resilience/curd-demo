@@ -1,5 +1,8 @@
 package org.example.curddemo.common.exception;
 
+import lombok.Getter;
+
+@Getter
 public class BusinessException extends RuntimeException{
     private final String errorCode;
     private final String userMessage;
@@ -16,11 +19,4 @@ public class BusinessException extends RuntimeException{
         this.userMessage = responseEnum.getErrorMsg();
     }
 
-    public String getErrorCode() {
-        return errorCode;
-    }
-
-    public String getUserMessage() {
-        return userMessage;
-    }
 }

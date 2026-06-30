@@ -1,8 +1,8 @@
 package org.example.curddemo.common.exception;
 
-import lombok.AllArgsConstructor;
+
 import lombok.Getter;
-import lombok.NoArgsConstructor;
+
 
 @Getter
 
