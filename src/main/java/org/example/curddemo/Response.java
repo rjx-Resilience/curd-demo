@@ -11,7 +11,7 @@ public class Response<T> {
     @Schema(description = "是否成功",example = "true")
     private boolean status;
 
-    @Schema(description = "错误信息")
+    @Schema(description = "错误信息（仅 status=false 时有值，成功时应保持空）")
     private String errorMsg;
 
     public static <K> Response<K> newSuccess(K data){
@@ -23,6 +23,14 @@ public class Response<T> {
 
     public static <K> Response<K> newFail(String errorMsg){
         Response<K> response = new Response<>();
+        response.setStatus(false);
+        response.setErrorMsg(errorMsg);
+        return response;
+    }
+
+    public static <K> Response<K> newFail(K data, String errorMsg) {
+        Response<K> response = new Response<>();
+        response.setData(data);
         response.setStatus(false);
         response.setErrorMsg(errorMsg);
         return response;

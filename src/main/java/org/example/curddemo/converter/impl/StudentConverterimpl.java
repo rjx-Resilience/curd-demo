@@ -77,15 +77,14 @@ public class StudentConverterimpl  implements studentConverter {
             return null;
         }
         Student student = new Student();
-        student.setId(studentExcelDTO.getId());
+        student.setId(null);
         student.setName(studentExcelDTO.getName() != null ? studentExcelDTO.getName().trim() : null);
-
         student.setAge(studentExcelDTO.getAge());
-        student.setEmail(studentExcelDTO.getEmail());
+        student.setEmail(studentExcelDTO.getEmail() != null ? studentExcelDTO.getEmail().trim() : null);
         student.setGender(studentExcelDTO.getGender());
-        student.setPhone(studentExcelDTO.getPhone());
+        student.setPhone(studentExcelDTO.getPhone() != null ? studentExcelDTO.getPhone().trim() : null);
         student.setAddr(studentExcelDTO.getAddr() != null ? studentExcelDTO.getAddr().trim() : null);
-        student.setStudentNo(studentExcelDTO.getStudentNo());
+        student.setStudentNo(studentExcelDTO.getStudentNo() != null ? studentExcelDTO.getStudentNo().trim() : null);
         return student;
     }
 
